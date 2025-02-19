@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
             let itemprice = vegPrices[item] || nonVegPrices[item]
             if (parsedURL.query.order) {
                 const quantity = parseInt(parsedURL.query.quantity, 10) || 1;
-                const price = itemprice * quantity; // Example pricing
+                const price = itemprice * quantity; 
                 const gst = price * 0.18;
                 const total = price + gst;
                 res.writeHead(200, { "Content-Type": "application/json" });
@@ -50,5 +50,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000, () => {
-    console.log("Server is running on http://localhost:3000");
+    console.log("Server is running ");
 });
